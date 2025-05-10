@@ -147,6 +147,13 @@
 h2 {
     margin-bottom: 1rem;
 }
+
+.sidebar a.active {
+  background-color: var(--sidebar-hover);
+  font-weight: 600;
+  border-left: 4px solid var(--white);
+  padding-left: calc(2rem - 4px); /* compensa a borda */
+}
   </style>
 </head>
 <body>
@@ -162,8 +169,8 @@ h2 {
   </header>
 
   <nav class="sidebar">
-    <a href="dashbord2.html">Dashboard</a>
-    <a href="cadastrarProduto.html">Cadastrar Produto</a>
+    <a href="dashboard2.html">Dashboard</a>
+    <a href="cadastrarProduto.html" class="active">Cadastrar Produto</a>
     <a href="cadastrarEntradas.html">Cadastrar Entradas</a>
     <a href="cadastrarSaidas.html">Cadastrar Saídas</a>
     <a href="relatorios.html">Relatórios</a>
