@@ -224,3 +224,10 @@ tr:hover {
   height: 30px;
   border-radius: 50%;
 }
+
+
+.current-date h2 {
+  margin-bottom: 1.5rem;
+  color: var(--accent);
+  font-size: 1.2rem;
+}
