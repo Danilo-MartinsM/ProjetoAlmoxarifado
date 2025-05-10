@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - naturAYO</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f7f6;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      display: flex;
+      width: 90%;
+      max-width: 1100px;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+    }
+
+    .login-box {
+      flex: 1;
+      padding: 60px 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .logo {
+      width: 100px;
+      margin-bottom: 30px;
+    }
+
+    .login-box h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+      color: #008080;
+    }
+
+    .login-box p {
+      margin-bottom: 30px;
+      color: #2d3d3f;
+    }
+
+    form input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    form a,
+    form button {
+      width: 100%;
+      padding: 12px;
+      background-color: #00a3a3;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    form a:hover,
+    form button:hover {
+      background-color: #008080;
+    }
+
+    .image-box {
+      flex: 1;
+      background-color: #e0f7f7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+    }
+
+    .image-box img {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="login-box">
+      <img src="logo.png" alt="Logo naturAYO" class="logo">
+      <h2>Bem-vindo</h2>
+      <p>Faça login para acessar o sistema de controle de estoque.</p>
+      <form>
+        <input type="text" placeholder="Usuário" required>
+        <input type="password" placeholder="Senha" required>
+        <a href="dashbord2.html">Entrar</a>
+      </form>
+    </div>
+    <div class="image-box">
+      <img src="imagem-lateral3.png" alt="Imagem ilustrativa">
+    </div>
+  </div>
+</body>
+</html>
