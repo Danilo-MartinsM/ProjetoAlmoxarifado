@@ -226,8 +226,9 @@
 <main class="main-content">
   <section class="content-section">
     <div class="current-date">
-      <h2>10 de maio de 2025</h2>
+      <h2 id="data-atual">Hoje: </h2>
     </div>
+
 
     <h2>Últimos Produtos Cadastrados</h2>
     <div class="product-list">
@@ -298,5 +299,38 @@
       calendar.render();
     });
   </script>
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const calendarEl = document.getElementById('calendar');
+      const dataAtualEl = document.getElementById('data-atual');
+
+      // Função para formatar a data corretamente para o português do Brasil
+      function formatarData(data) {
+        const opcoes = { day: '2-digit', month: 'long', year: 'numeric' };
+        return data.toLocaleDateString('pt-BR', opcoes);
+      }
+
+      // Inicializa o calendário
+      const calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth',
+        locale: 'pt-br',
+        selectable: true,
+        dateClick: function (info) {
+          // Usa diretamente info.date para evitar problemas de fuso horário
+          dataAtualEl.textContent = 'Data: ' + formatarData(info.date);
+        }
+      });
+
+      calendar.render();
+
+      // Define a data atual (ao carregar a página)
+      const hoje = new Date();
+      if (dataAtualEl) {
+        dataAtualEl.textContent = 'Hoje: ' + formatarData(hoje);
+      }
+    });
+  </script>
+
 </body>
 </html>
