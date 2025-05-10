@@ -57,13 +57,17 @@
   form a {
     width: 100%;
     padding: 12px;
-    background-color: #333;
-    color: white;
+    /*background-color: #c9dfd3;*/
+    background-color: #e9f0ec;
+    color: black;
     border: none;
     border-radius: 6px;
     font-size: 16px;
     cursor: pointer;
     transition: background 0.3s;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
   }
   form button {
     width: 100%;
