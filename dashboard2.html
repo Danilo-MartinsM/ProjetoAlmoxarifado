@@ -160,15 +160,12 @@
         day: '2-digit', month: 'long', year: 'numeric'
       });
 
-      filtroProduto.addEventListener('change', () => {
-        calendar.removeAllEvents();
-        calendar.addEventSource(filtrarEventos());
-      });
-
-      filtroCategoria.addEventListener('change', () => {
-        calendar.removeAllEvents();
-        calendar.addEventSource(filtrarEventos());
-      });
+      [filtroProduto, filtroCategoria].forEach(filtro =>
+        filtro.addEventListener('change', () => {
+          calendar.removeAllEvents();
+          calendar.addEventSource(filtrarEventos());
+        })
+      );
     });
   </script>
 </body>
