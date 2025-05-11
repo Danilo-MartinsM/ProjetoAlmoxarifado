@@ -232,4 +232,12 @@ tr:hover {
   font-size: 1.2rem;
 }
 
+/*Auto complemento da pesquisa do estoque*/
+#autocompleteList li {
+  transition: background-color 0.2s ease, padding-left 0.2s ease;
+}
 
+#autocompleteList li:hover {
+  background-color: #e6f7f7;
+  padding-left: 1rem;
+}
