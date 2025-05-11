@@ -122,11 +122,11 @@
       const filtroCategoria = document.getElementById('filtroCategoria');
 
       const eventosOriginais = [
-        { title: 'Produto A - Higiene', date: '2025-05-08' },
-        { title: 'Produto B - Alimentos', date: '2025-05-07' },
-        { title: 'Produto C - Cosméticos', date: '2025-05-06' },
-        { title: 'Produto D - Higiene', date: '2025-05-05' },
-        { title: 'Produto E - Alimentos', date: '2025-05-04' },
+        { title: 'Produto A - Higiene', date: '2025-05-08', color: '#2ecc71' },   // Verde
+        { title: 'Produto B - Alimentos', date: '2025-05-07', color: '#3498db' }, // Azul
+        { title: 'Produto C - Cosméticos', date: '2025-05-06', color: '#9b59b6' },// Roxo
+        { title: 'Produto D - Higiene', date: '2025-05-05', color: '#2ecc71' },
+        { title: 'Produto E - Alimentos', date: '2025-05-04', color: '#3498db' }
       ];
 
       function filtrarEventos() {
@@ -142,10 +142,19 @@
         });
       }
 
+      // Destaque do dia atual
+      const hoje = new Date().toISOString().split('T')[0];
+      const eventosHoje = [{
+        title: 'Hoje',
+        date: hoje,
+        display: 'background',
+        backgroundColor: '#ffeaa7' // amarelo claro
+      }];
+
       const calendar = new FullCalendar.Calendar(calendarEl, {
         initialView: 'dayGridMonth',
         locale: 'pt-br',
-        events: filtrarEventos(),
+        events: [...filtrarEventos(), ...eventosHoje],
         dateClick: function (info) {
           dataAtualEl.textContent = 'Data: ' + info.date.toLocaleDateString('pt-BR', {
             day: '2-digit', month: 'long', year: 'numeric'
@@ -155,15 +164,14 @@
 
       calendar.render();
 
-      const hoje = new Date();
-      dataAtualEl.textContent = 'Hoje: ' + hoje.toLocaleDateString('pt-BR', {
+      dataAtualEl.textContent = 'Hoje: ' + new Date().toLocaleDateString('pt-BR', {
         day: '2-digit', month: 'long', year: 'numeric'
       });
 
       [filtroProduto, filtroCategoria].forEach(filtro =>
         filtro.addEventListener('change', () => {
           calendar.removeAllEvents();
-          calendar.addEventSource(filtrarEventos());
+          calendar.addEventSource([...filtrarEventos(), ...eventosHoje]);
         })
       );
     });

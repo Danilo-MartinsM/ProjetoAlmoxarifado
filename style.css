@@ -23,7 +23,6 @@ body {
   color: var(--text);
 }
 
-
 /*============================
   CABEÇALHO (HEADER)
 ============================*/
@@ -41,7 +40,6 @@ header h1 {
   font-size: 1.5rem;
   color: var(--accent);
 }
-
 
 /*============================
   BARRA LATERAL (SIDEBAR)
@@ -77,7 +75,6 @@ header h1 {
   padding-left: calc(2rem - 4px);
 }
 
-
 /*============================
   CONTEÚDO PRINCIPAL
 ============================*/
@@ -112,7 +109,6 @@ header h1 {
   color: var(--accent);
 }
 
-
 /*============================
   TÍTULOS
 ============================*/
@@ -129,7 +125,6 @@ h3 {
   color: var(--accent);
   font-size: 1.2rem;
 }
-
 
 /*============================
   FORMULÁRIOS
@@ -166,7 +161,6 @@ h3 {
   background-size: 1rem;
 }
 
-
 /*============================
   BOTÕES
 ============================*/
@@ -184,7 +178,6 @@ button {
 button:hover {
   background-color: #006f6f;
 }
-
 
 /*============================
   ITENS DE PRODUTO
@@ -208,7 +201,6 @@ button:hover {
   font-size: 2rem;
   color: var(--accent);
 }
-
 
 /*============================
   TABELAS
@@ -239,7 +231,6 @@ tr:hover {
   background-color: #f1f1f1;
 }
 
-
 /*============================
   LOGO E INFORMAÇÕES DO USUÁRIO
 ============================*/
@@ -261,7 +252,6 @@ tr:hover {
   height: 30px;
   border-radius: 50%;
 }
-
 
 /*============================
   AUTOCOMPLETO DA PESQUISA
@@ -294,4 +284,46 @@ tr:hover {
   padding: 0.6rem;
   border: 1px solid #ccc;
   border-radius: 8px;
+  background-color: #fff;
+  background-image: url("data:image/svg+xml,%3Csvg fill='none' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5H7z' fill='%23008080'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.8rem center;
+  background-size: 1rem;
+}
+
+/*============================
+  ADIÇÃO: ESTILO PARA FULLCALENDAR
+============================*/
+#calendar {
+  max-width: 100%;
+  margin: 0 auto;
+  font-family: 'Inter', sans-serif;
+}
+
+.fc .fc-toolbar-title {
+  font-size: 1.25rem;
+  color: var(--accent);
+}
+
+.fc .fc-button {
+  background-color: var(--accent);
+  border: none;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  color: var(--white);
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.fc .fc-button:hover {
+  background-color: var(--sidebar-hover);
+}
+
+.fc .fc-daygrid-event {
+  background-color: var(--sidebar);
+  border: none;
+  padding: 2px 4px;
+  border-radius: 4px;
+  color: var(--white);
+  font-size: 0.75rem;
 }
