@@ -156,9 +156,16 @@
         locale: 'pt-br',
         events: [...filtrarEventos(), ...eventosHoje],
         dateClick: function (info) {
-          dataAtualEl.textContent = 'Data: ' + info.date.toLocaleDateString('pt-BR', {
-            day: '2-digit', month: 'long', year: 'numeric'
-          });
+          const selectedDate = info.date.toISOString().split('T')[0];
+          if (selectedDate === hoje) {
+            dataAtualEl.textContent = 'Hoje: ' + info.date.toLocaleDateString('pt-BR', {
+              day: '2-digit', month: 'long', year: 'numeric'
+            });
+          } else {
+            dataAtualEl.textContent = 'Data: ' + info.date.toLocaleDateString('pt-BR', {
+              day: '2-digit', month: 'long', year: 'numeric'
+            });
+          }
         }
       });
 
