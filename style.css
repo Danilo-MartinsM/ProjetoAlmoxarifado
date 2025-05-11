@@ -1,3 +1,6 @@
+/*============================
+  VARIÁVEIS E CONFIGURAÇÕES GLOBAIS
+============================*/
 :root {
   --bg: #f4f7f6;
   --sidebar: #00a3a3;
@@ -20,7 +23,10 @@ body {
   color: var(--text);
 }
 
-/* Header */
+
+/*============================
+  CABEÇALHO (HEADER)
+============================*/
 header {
   display: flex;
   justify-content: space-between;
@@ -36,7 +42,10 @@ header h1 {
   color: var(--accent);
 }
 
-/* Sidebar */
+
+/*============================
+  BARRA LATERAL (SIDEBAR)
+============================*/
 .sidebar {
   position: fixed;
   top: 0;
@@ -68,7 +77,10 @@ header h1 {
   padding-left: calc(2rem - 4px);
 }
 
-/* Main Content */
+
+/*============================
+  CONTEÚDO PRINCIPAL
+============================*/
 .main-content {
   margin-left: 240px;
   padding: 2rem;
@@ -76,7 +88,7 @@ header h1 {
   gap: 2rem;
 }
 
-/* Content Section */
+/* Seções de conteúdo e calendário */
 .content-section,
 .calendar {
   background-color: var(--white);
@@ -100,7 +112,10 @@ header h1 {
   color: var(--accent);
 }
 
-/* Titles */
+
+/*============================
+  TÍTULOS
+============================*/
 h2 {
   margin-bottom: 1rem;
 }
@@ -109,7 +124,16 @@ h3 {
   margin: 1rem 0;
 }
 
-/* Forms */
+.current-date h2 {
+  margin-bottom: 1.5rem;
+  color: var(--accent);
+  font-size: 1.2rem;
+}
+
+
+/*============================
+  FORMULÁRIOS
+============================*/
 .form-group {
   margin-bottom: 1.5rem;
 }
@@ -142,7 +166,10 @@ h3 {
   background-size: 1rem;
 }
 
-/* Buttons */
+
+/*============================
+  BOTÕES
+============================*/
 button {
   background-color: var(--accent);
   color: var(--white);
@@ -158,7 +185,10 @@ button:hover {
   background-color: #006f6f;
 }
 
-/* Product Item */
+
+/*============================
+  ITENS DE PRODUTO
+============================*/
 .product-item {
   display: flex;
   align-items: center;
@@ -179,7 +209,10 @@ button:hover {
   color: var(--accent);
 }
 
-/* Table Styles */
+
+/*============================
+  TABELAS
+============================*/
 .table-container {
   margin-top: 2rem;
   overflow-x: auto;
@@ -190,7 +223,8 @@ table {
   border-collapse: collapse;
 }
 
-th, td {
+th,
+td {
   padding: 1rem;
   text-align: left;
   border-bottom: 1px solid #ddd;
@@ -205,7 +239,10 @@ tr:hover {
   background-color: #f1f1f1;
 }
 
-/* Logo and User Info */
+
+/*============================
+  LOGO E INFORMAÇÕES DO USUÁRIO
+============================*/
 .logo-area,
 .user-info {
   display: flex;
@@ -226,13 +263,9 @@ tr:hover {
 }
 
 
-.current-date h2 {
-  margin-bottom: 1.5rem;
-  color: var(--accent);
-  font-size: 1.2rem;
-}
-
-/*Auto complemento da pesquisa do estoque*/
+/*============================
+  AUTOCOMPLETO DA PESQUISA
+============================*/
 #autocompleteList li {
   transition: background-color 0.2s ease, padding-left 0.2s ease;
 }
@@ -241,4 +274,3 @@ tr:hover {
   background-color: #f0f0f0;
   color: #008080;
 }
-
