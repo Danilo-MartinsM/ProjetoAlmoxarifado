@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estoque - naturAYO</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <div class="logo-area">
+      <img src="logo1.png" alt="Logo naturAYO">
+      <h1>naturAYO</h1>
+    </div>
+    <div class="user-info">
+      <img src="foto-perfil.jpg" alt="Foto do usuário">
+      <span>Usuário: Danilo Martins</span>
+    </div>
+  </header>
+
+  <nav class="sidebar">
+    <a href="dashboard2.html">Início</a>
+    <a href="estoque.html" class="active">Estoque</a>
+    <a href="cadastrarProduto.html">Cadastrar Produto</a>
+    <a href="cadastrarEntradas.html">Cadastrar Entradas</a>
+    <a href="cadastrarSaidas.html">Cadastrar Saídas</a>
+    <a href="relatorios.html">Relatórios</a>
+    <a href="configuracoes.html">Configurações</a>
+    <a href="ajuda.html">Ajuda</a>
+  </nav>
+
+  <main class="main-content">
+    <section class="content-section">
+      <h2>Estoque Atual</h2>
+
+      <div style="margin-top: 1.5rem; display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
+        <input type="text" placeholder="Pesquisar por nome..." style="padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px; flex: 1; min-width: 200px;">
+        <select style="padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px;">
+          <option value="">Todas as Categorias</option>
+          <option value="alimentos">Alimentos</option>
+          <option value="higiene">Higiene</option>
+          <option value="limpeza">Limpeza</option>
+        </select>
+        <input type="date" style="padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px;">
+      </div>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Produto</th>
+              <th>Categoria</th>
+              <th>Quantidade</th>
+              <th>Última Alteração</th>
+              <th>Observações</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Dados fictícios de estoque -->
+            <tr>
+              <td>Shampoo Natural</td>
+              <td>Higiene</td>
+              <td>120</td>
+              <td>2025-05-10</td>
+              <td>Reposição recebida</td>
+            </tr>
+            <tr>
+              <td>Sabonete de Aveia</td>
+              <td>Higiene</td>
+              <td>85</td>
+              <td>2025-05-08</td>
+              <td>Em estoque baixo</td>
+            </tr>
+            <tr>
+              <td>Arroz Integral</td>
+              <td>Alimentos</td>
+              <td>200</td>
+              <td>2025-05-06</td>
+              <td>Lote novo cadastrado</td>
+            </tr>
+            <tr>
+              <td>Detergente Bio</td>
+              <td>Limpeza</td>
+              <td>60</td>
+              <td>2025-05-04</td>
+              <td>Reposição programada</td>
+            </tr>
+            <tr>
+              <td>Farinha de Amêndoas</td>
+              <td>Alimentos</td>
+              <td>50</td>
+              <td>2025-04-30</td>
+              <td>Vencimento em breve</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
