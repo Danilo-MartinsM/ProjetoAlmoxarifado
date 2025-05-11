@@ -238,7 +238,7 @@ tr:hover {
 }
 
 #autocompleteList li:hover {
-  background-color: #e6f7f7;
+  background-color: rgb(193, 207, 207);
   padding-left: 1rem;
 }
 
