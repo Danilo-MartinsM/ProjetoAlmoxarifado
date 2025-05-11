@@ -8,6 +8,9 @@
   <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/main.min.css" rel="stylesheet" />
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="style.css" />
+  <style>
+    
+  </style>
 </head>
 <body>
   <header>
@@ -166,6 +169,14 @@
               day: '2-digit', month: 'long', year: 'numeric'
             });
           }
+
+          // Remover a classe de seleção da data anterior, se houver
+          document.querySelectorAll('.fc-day').forEach(day => {
+            day.classList.remove('fc-day-selected');
+          });
+
+          // Adicionar a classe de seleção à data clicada
+          info.dayEl.classList.add('fc-day-selected');
         }
       });
 

@@ -327,3 +327,12 @@ tr:hover {
   color: var(--white);
   font-size: 0.75rem;
 }
+
+/*=====================
+Estilos do calendário 
+======================*/
+.fc-day-selected {
+  background-color: #f39c12 !important; /* Cor de destaque */
+  color: white !important; /* Cor do texto */
+  border-radius: 50%;
+}
