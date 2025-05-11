@@ -36,7 +36,14 @@
       <h2>Estoque Atual</h2>
 
       <div style="margin-top: 1.5rem; display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
-        <input type="text" placeholder="Pesquisar por nome..." style="padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px; flex: 1; min-width: 200px;">
+        <div style="position: relative; flex: 1; min-width: 200px;">
+            <input id="searchInput" type="text" placeholder="Pesquisar por nome..." 
+                   style="width: 100%; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px;">
+            <ul id="autocompleteList" 
+                style="position: absolute; top: 100%; left: 0; right: 0; background: #fff; border: 1px solid #ccc; border-top: none; max-height: 150px; overflow-y: auto; display: none; z-index: 10; list-style: none; padding: 0; margin: 0; border-radius: 0 0 4px 4px;">
+            </ul>
+          </div>
+          
         <select style="padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px;">
           <option value="">Todas as Categorias</option>
           <option value="alimentos">Alimentos</option>
@@ -99,5 +106,64 @@
       </div>
     </section>
   </main>
+  <script>
+    const products = [
+      "Shampoo Natural",
+      "Sabonete de Aveia",
+      "Arroz Integral",
+      "Detergente Bio",
+      "Farinha de Amêndoas"
+    ];
+  
+    const searchInput = document.getElementById("searchInput");
+    const autocompleteList = document.getElementById("autocompleteList");
+  
+    searchInput.addEventListener("input", function () {
+      const value = this.value.toLowerCase();
+      autocompleteList.innerHTML = "";
+  
+      if (value === "") {
+        autocompleteList.style.display = "none";
+        return;
+      }
+  
+      const filtered = products.filter(prod => prod.toLowerCase().includes(value));
+  
+      if (filtered.length === 0) {
+        autocompleteList.style.display = "none";
+        return;
+      }
+  
+      filtered.forEach(prod => {
+        const li = document.createElement("li");
+        li.textContent = prod;
+        li.style.padding = "0.5rem";
+        li.style.cursor = "pointer";
+        li.addEventListener("click", function () {
+          searchInput.value = prod;
+          autocompleteList.style.display = "none";
+          filtrarTabela(prod);
+        });
+        autocompleteList.appendChild(li);
+      });
+  
+      autocompleteList.style.display = "block";
+    });
+  
+    document.addEventListener("click", function (e) {
+      if (!autocompleteList.contains(e.target) && e.target !== searchInput) {
+        autocompleteList.style.display = "none";
+      }
+    });
+  
+    function filtrarTabela(filtro) {
+      const linhas = document.querySelectorAll("table tbody tr");
+      linhas.forEach(linha => {
+        const nome = linha.cells[0].textContent.toLowerCase();
+        linha.style.display = nome.includes(filtro.toLowerCase()) ? "" : "none";
+      });
+    }
+  </script>
+  
 </body>
 </html>
