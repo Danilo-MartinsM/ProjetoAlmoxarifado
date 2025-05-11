@@ -278,6 +278,33 @@
 
   <aside class="calendar">
     <h3>Calendário</h3>
+  
+    <div class="filter-group">
+      <label for="filtroProduto">Filtrar por Produto:</label>
+      <select id="filtroProduto">
+        <option value="">Todos</option>
+        <option value="Produto A">Produto A</option>
+        <option value="Produto B">Produto B</option>
+        <option value="Produto C">Produto C</option>
+        <option value="Produto D">Produto D</option>
+        <option value="Produto E">Produto E</option>
+      </select>
+    </div>
+  
+    <div class="filter-group">
+      <label for="filtroCategoria">Filtrar por Categoria:</label>
+      <select id="filtroCategoria">
+        <option value="">Todas</option>
+        <option value="Higiene">Higiene</option>
+        <option value="Alimentos">Alimentos</option>
+        <option value="Cosméticos">Cosméticos</option>
+      </select>
+    </div>
+  
+    <div id="calendar"></div>
+  </aside>
+  
+    <h3>Calendário</h3>
     <div id='calendar'></div>
   </aside>
 </main>
@@ -332,6 +359,63 @@
       }
     });
   </script>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const calendarEl = document.getElementById('calendar');
+      const dataAtualEl = document.getElementById('data-atual');
+      const filtroProduto = document.getElementById('filtroProduto');
+      const filtroCategoria = document.getElementById('filtroCategoria');
+  
+      const eventosOriginais = [
+        { title: 'Produto A - Higiene', date: '2025-05-08' },
+        { title: 'Produto B - Alimentos', date: '2025-05-07' },
+        { title: 'Produto C - Cosméticos', date: '2025-05-06' },
+        { title: 'Produto D - Higiene', date: '2025-05-05' },
+        { title: 'Produto E - Alimentos', date: '2025-05-04' },
+      ];
+  
+      function filtrarEventos() {
+        const produtoSelecionado = filtroProduto.value;
+        const categoriaSelecionada = filtroCategoria.value;
+  
+        return eventosOriginais.filter(ev => {
+          const [produto, categoria] = ev.title.split(' - ');
+          return (
+            (!produtoSelecionado || produto === produtoSelecionado) &&
+            (!categoriaSelecionada || categoria === categoriaSelecionada)
+          );
+        });
+      }
+  
+      const calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth',
+        locale: 'pt-br',
+        events: filtrarEventos(),
+        dateClick: function (info) {
+          dataAtualEl.textContent = 'Data: ' + info.date.toLocaleDateString('pt-BR');
+        }
+      });
+  
+      calendar.render();
+  
+      const hoje = new Date();
+      dataAtualEl.textContent = 'Hoje: ' + hoje.toLocaleDateString('pt-BR', {
+        day: '2-digit', month: 'long', year: 'numeric'
+      });
+  
+      filtroProduto.addEventListener('change', () => {
+        calendar.removeAllEvents();
+        calendar.addEventSource(filtrarEventos());
+      });
+  
+      filtroCategoria.addEventListener('change', () => {
+        calendar.removeAllEvents();
+        calendar.addEventSource(filtrarEventos());
+      });
+    });
+  </script>
+  
   
 
 </body>

@@ -274,3 +274,24 @@ tr:hover {
   background-color: #f0f0f0;
   color: #008080;
 }
+
+/*============================
+  FILTROS DE CALENDÁRIO
+============================*/
+.filter-group {
+  margin-bottom: 1rem;
+}
+
+.filter-group label {
+  font-weight: 500;
+  display: block;
+  margin-bottom: 0.3rem;
+  color: var(--text);
+}
+
+.filter-group select {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
