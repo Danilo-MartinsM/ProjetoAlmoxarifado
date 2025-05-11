@@ -1,167 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Início - naturAYO</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <link href='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/main.min.css' rel='stylesheet' />
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <!--<style>
-    :root {
-      --bg: #f4f7f6;
-      --sidebar: #00a3a3;
-      --sidebar-hover: #008080;
-      --header: #ffffff;
-      --white: #fff;
-      --text: #2d3d3f;
-      --accent: #008080;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-    }
-
-    header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: var(--header);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    margin-left: 240px; /* Compensa a sidebar */
-  }
-
-
-    header h1 {
-      font-size: 1.5rem;
-      color: var(--accent);
-    }
-
-    .user-info {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-weight: 500;
-    }
-
-    .user-info img {
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-    }
-
-    .sidebar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 240px;
-      height: 100vh;
-      background-color: var(--sidebar);
-      padding-top: 5rem;
-      box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-    }
-
-    .sidebar a {
-      display: block;
-      padding: 1rem 2rem;
-      color: var(--white);
-      text-decoration: none;
-      font-weight: 500;
-      transition: background-color 0.3s;
-    }
-
-    .sidebar a:hover {
-      background-color: var(--sidebar-hover);
-    }
-
-    .main-content {
-      margin-left: 240px;
-      padding: 2rem;
-      display: flex;
-      gap: 2rem;
-    }
-
-    .content-section {
-      flex: 2;
-      background-color: var(--white);
-      padding: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    }
-
-    .calendar {
-      flex: 1;
-      background-color: var(--white);
-      padding: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-      min-width: 300px;
-    }
-
-    .calendar h3 {
-      margin-top: 0;
-      margin-bottom: 1rem;
-      text-align: center;
-      color: var(--accent);
-    }
-    .product-item {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  background-color: var(--white);
-  padding: 1rem;
-  border-radius: 12px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-  transition: transform 0.2s;
-}
-
-.product-item:hover {
-  transform: translateY(-2px);
-}
-
-.product-icon {
-  font-size: 2rem;
-  color: var(--accent);
-}
-.logo-area {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.logo-area img {
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
-}
-
-.sidebar a.active {
-  background-color: var(--sidebar-hover);
-  font-weight: 600;
-  border-left: 4px solid var(--white);
-  padding-left: calc(2rem - 4px); /* compensa a borda */
-}
-
-  </style>!-->
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/main.min.css" rel="stylesheet" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
     <div class="logo-area">
-      <img src="logo1.png" alt="Logo naturAYO">
+      <img src="logo1.png" alt="Logo naturAYO" />
       <h1>naturAYO</h1>
-    </div>    
+    </div>
     <div class="user-info">
-      <img src="foto-perfil.jpg" alt="Foto do usuário">
+      <img src="foto-perfil.jpg" alt="Foto do usuário" />
       <span>Usuário: Danilo Martins</span>
     </div>
   </header>
@@ -177,196 +32,95 @@
     <a href="ajuda.html">Ajuda</a>
   </nav>
 
-  <!--<main class="main-content">
+  <main class="main-content">
     <section class="content-section">
+      <div class="current-date">
+        <h2 id="data-atual">Hoje: </h2>
+      </div>
+
       <h2>Últimos Produtos Cadastrados</h2>
       <div class="product-list">
         <div class="product-item">
           <div class="product-icon">📦</div>
           <div>
-            <strong>Produto A</strong><br>
-            <small>10 unidades</small>
+            <strong>Produto A</strong><br />
+            <small>10 unidades</small><br />
+            <small>Cadastrado em: 08/05/2025</small>
           </div>
         </div>
         <div class="product-item">
           <div class="product-icon">📦</div>
           <div>
-            <strong>Produto B</strong><br>
-            <small>5 unidades</small>
+            <strong>Produto B</strong><br />
+            <small>5 unidades</small><br />
+            <small>Cadastrado em: 07/05/2025</small>
           </div>
         </div>
         <div class="product-item">
           <div class="product-icon">📦</div>
           <div>
-            <strong>Produto C</strong><br>
-            <small>20 unidades</small>
+            <strong>Produto C</strong><br />
+            <small>20 unidades</small><br />
+            <small>Cadastrado em: 06/05/2025</small>
           </div>
         </div>
         <div class="product-item">
           <div class="product-icon">📦</div>
           <div>
-            <strong>Produto D</strong><br>
-            <small>8 unidades</small>
+            <strong>Produto D</strong><br />
+            <small>8 unidades</small><br />
+            <small>Cadastrado em: 05/05/2025</small>
           </div>
         </div>
         <div class="product-item">
           <div class="product-icon">📦</div>
           <div>
-            <strong>Produto E</strong><br>
-            <small>12 unidades</small>
+            <strong>Produto E</strong><br />
+            <small>12 unidades</small><br />
+            <small>Cadastrado em: 04/05/2025</small>
           </div>
         </div>
-      </div>      
+      </div>
     </section>
 
     <aside class="calendar">
       <h3>Calendário</h3>
-      <div id='calendar'></div>
+
+      <div class="filter-group">
+        <label for="filtroProduto">Filtrar por Produto:</label>
+        <select id="filtroProduto">
+          <option value="">Todos</option>
+          <option value="Produto A">Produto A</option>
+          <option value="Produto B">Produto B</option>
+          <option value="Produto C">Produto C</option>
+          <option value="Produto D">Produto D</option>
+          <option value="Produto E">Produto E</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label for="filtroCategoria">Filtrar por Categoria:</label>
+        <select id="filtroCategoria">
+          <option value="">Todas</option>
+          <option value="Higiene">Higiene</option>
+          <option value="Alimentos">Alimentos</option>
+          <option value="Cosméticos">Cosméticos</option>
+        </select>
+      </div>
+
+      <div id="calendar"></div>
     </aside>
-  </main>!-->
-<main class="main-content">
-  <section class="content-section">
-    <div class="current-date">
-      <h2 id="data-atual">Hoje: </h2>
-    </div>
-
-
-    <h2>Últimos Produtos Cadastrados</h2>
-    <div class="product-list">
-      <div class="product-item">
-        <div class="product-icon">📦</div>
-        <div>
-          <strong>Produto A</strong><br>
-          <small>10 unidades</small><br>
-          <small>Cadastrado em: 08/05/2025</small>
-        </div>
-      </div>
-      <div class="product-item">
-        <div class="product-icon">📦</div>
-        <div>
-          <strong>Produto B</strong><br>
-          <small>5 unidades</small><br>
-          <small>Cadastrado em: 07/05/2025</small>
-        </div>
-      </div>
-      <div class="product-item">
-        <div class="product-icon">📦</div>
-        <div>
-          <strong>Produto C</strong><br>
-          <small>20 unidades</small><br>
-          <small>Cadastrado em: 06/05/2025</small>
-        </div>
-      </div>
-      <div class="product-item">
-        <div class="product-icon">📦</div>
-        <div>
-          <strong>Produto D</strong><br>
-          <small>8 unidades</small><br>
-          <small>Cadastrado em: 05/05/2025</small>
-        </div>
-      </div>
-      <div class="product-item">
-        <div class="product-icon">📦</div>
-        <div>
-          <strong>Produto E</strong><br>
-          <small>12 unidades</small><br>
-          <small>Cadastrado em: 04/05/2025</small>
-        </div>
-      </div>
-    </div>      
-  </section>
-
-  <aside class="calendar">
-    <h3>Calendário</h3>
-  
-    <div class="filter-group">
-      <label for="filtroProduto">Filtrar por Produto:</label>
-      <select id="filtroProduto">
-        <option value="">Todos</option>
-        <option value="Produto A">Produto A</option>
-        <option value="Produto B">Produto B</option>
-        <option value="Produto C">Produto C</option>
-        <option value="Produto D">Produto D</option>
-        <option value="Produto E">Produto E</option>
-      </select>
-    </div>
-  
-    <div class="filter-group">
-      <label for="filtroCategoria">Filtrar por Categoria:</label>
-      <select id="filtroCategoria">
-        <option value="">Todas</option>
-        <option value="Higiene">Higiene</option>
-        <option value="Alimentos">Alimentos</option>
-        <option value="Cosméticos">Cosméticos</option>
-      </select>
-    </div>
-  
-    <div id="calendar"></div>
-  </aside>
-  
-    <h3>Calendário</h3>
-    <div id='calendar'></div>
-  </aside>
-</main>
+  </main>
 
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-  <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js'></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      var calendarEl = document.getElementById('calendar');
-
-      var calendar = new FullCalendar.Calendar(calendarEl, {
-        initialView: 'dayGridMonth',
-        locale: 'pt-br',
-        selectable: true,
-        dateClick: function(info) {
-          alert('Data selecionada: ' + info.dateStr);
-        }
-      });
-
-      calendar.render();
-    });
-  </script>
   <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const calendarEl = document.getElementById('calendar');
-      const dataAtualEl = document.getElementById('data-atual');
-
-      // Função para formatar a data corretamente para o português do Brasil
-      function formatarData(data) {
-        const opcoes = { day: '2-digit', month: 'long', year: 'numeric' };
-        return data.toLocaleDateString('pt-BR', opcoes);
-      }
-
-      // Inicializa o calendário
-      const calendar = new FullCalendar.Calendar(calendarEl, {
-        initialView: 'dayGridMonth',
-        locale: 'pt-br',
-        selectable: true,
-        dateClick: function (info) {
-          // Usa diretamente info.date para evitar problemas de fuso horário
-          dataAtualEl.textContent = 'Data: ' + formatarData(info.date);
-        }
-      });
-
-      calendar.render();
-
-      // Define a data atual (ao carregar a página)
-      const hoje = new Date();
-      if (dataAtualEl) {
-        dataAtualEl.textContent = 'Hoje: ' + formatarData(hoje);
-      }
-    });
-  </script>
-  
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       const calendarEl = document.getElementById('calendar');
       const dataAtualEl = document.getElementById('data-atual');
       const filtroProduto = document.getElementById('filtroProduto');
       const filtroCategoria = document.getElementById('filtroCategoria');
-  
+
       const eventosOriginais = [
         { title: 'Produto A - Higiene', date: '2025-05-08' },
         { title: 'Produto B - Alimentos', date: '2025-05-07' },
@@ -374,11 +128,11 @@
         { title: 'Produto D - Higiene', date: '2025-05-05' },
         { title: 'Produto E - Alimentos', date: '2025-05-04' },
       ];
-  
+
       function filtrarEventos() {
         const produtoSelecionado = filtroProduto.value;
         const categoriaSelecionada = filtroCategoria.value;
-  
+
         return eventosOriginais.filter(ev => {
           const [produto, categoria] = ev.title.split(' - ');
           return (
@@ -387,36 +141,35 @@
           );
         });
       }
-  
+
       const calendar = new FullCalendar.Calendar(calendarEl, {
         initialView: 'dayGridMonth',
         locale: 'pt-br',
         events: filtrarEventos(),
         dateClick: function (info) {
-          dataAtualEl.textContent = 'Data: ' + info.date.toLocaleDateString('pt-BR');
+          dataAtualEl.textContent = 'Data: ' + info.date.toLocaleDateString('pt-BR', {
+            day: '2-digit', month: 'long', year: 'numeric'
+          });
         }
       });
-  
+
       calendar.render();
-  
+
       const hoje = new Date();
       dataAtualEl.textContent = 'Hoje: ' + hoje.toLocaleDateString('pt-BR', {
         day: '2-digit', month: 'long', year: 'numeric'
       });
-  
+
       filtroProduto.addEventListener('change', () => {
         calendar.removeAllEvents();
         calendar.addEventSource(filtrarEventos());
       });
-  
+
       filtroCategoria.addEventListener('change', () => {
         calendar.removeAllEvents();
         calendar.addEventSource(filtrarEventos());
       });
     });
   </script>
-  
-  
-
 </body>
 </html>
