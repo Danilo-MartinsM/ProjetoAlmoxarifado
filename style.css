@@ -2,14 +2,14 @@
   VARIÁVEIS E CONFIGURAÇÕES GLOBAIS
 ============================*/
 :root {
-  --bg: #f4f7f6;
-  --sidebar: #00a3a3;
-  --sidebar-hover: #008080;
-  --header: #ffffff;
-  --white: #fff;
-  --text: #2d3d3f;
-  --accent: #008080;
-}
+      --bg: #f4f4f4;
+      --sidebar: #333;
+      --sidebar-hover: #555;
+      --header: #585555;
+      --white: #fff;
+      --text: #2d3d3f;
+      --accent: #333;
+    }
 
 * {
   box-sizing: border-box;
@@ -52,7 +52,7 @@ header h1 {
   height: 100vh;
   background-color: var(--sidebar);
   padding-top: 5rem;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
 }
 
 .sidebar a {
