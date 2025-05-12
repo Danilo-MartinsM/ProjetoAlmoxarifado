@@ -1,3 +1,4 @@
+/* colors.css */
 :root {
   --bg: #f4f4f4;
   --sidebar: #333;
@@ -8,90 +9,18 @@
   --accent: #333;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  font-family: 'Segoe UI', sans-serif;
   background-color: var(--bg);
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   color: var(--text);
 }
 
-.container {
-  display: flex;
-  width: 90%;
-  max-width: 1100px;
-  background-color: var(--white);
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
-  overflow: hidden;
-}
-
-.login-box {
-  flex: 1;
-  padding: 60px 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.logo {
-  width: 100px;
-  margin-bottom: 30px;
-}
-
-.login-box h2 {
-  font-size: 28px;
-  margin-bottom: 10px;
-  color: var(--accent);
-}
-
-.login-box p {
-  margin-bottom: 30px;
-  color: #555;
-}
-
-form input {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 16px;
-}
-
-form a {
-  width: 100%;
-  padding: 12px;
-  background-color: #e9f0ec; /* pode ser adaptado para var(--bg) se desejar mais coerência */
-  color: black;
-  border: none;
-  border-radius: 6px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background 0.3s;
-  text-decoration: none;
-  text-align: center;
-  display: inline-block;
+a {
+  background-color: #e9f0ec;
+  color: var(--text);
 }
 
 form button {
-  width: 100%;
-  padding: 12px;
   background-color: var(--accent);
-  color: var(--white);
-  border: none;
-  border-radius: 6px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background 0.3s;
 }
 
 form button:hover {
@@ -99,16 +28,5 @@ form button:hover {
 }
 
 .image-box {
-  flex: 1;
   background-color: #e9f0ec;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 40px;
-}
-
-.image-box img {
-  width: 100%;
-  max-width: 400px;
-  height: auto;
 }
